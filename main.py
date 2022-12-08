@@ -10,14 +10,10 @@ sum_dealer = sum(dealer_cards)
 
 print(my_cards,dealer_cards[0])
 
-
-
 def bj():
-    game_finished = False
+ 
     global sum_my
-    if  game_finished:
-        return
-    
+   
     choice = input('press h to hit or f to finish ')
     
     if choice == 'h':
@@ -34,12 +30,10 @@ def bj():
             sum_my += new_card
         print(my_cards,dealer_cards[0])
 
-        if sum_my >= 21:
-            game_finished = True
-        else:
+        if sum_my < 21:
             bj()
     else:
-        game_finished = True
+        return
             
     
 bj()
