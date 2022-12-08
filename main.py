@@ -36,7 +36,8 @@ def bj():
         return
             
     
-bj()
+if sum_my != 21:
+    bj()
 
 if sum_my > 21 or sum_my < sum_dealer:
     print('you lost',my_cards,dealer_cards)
